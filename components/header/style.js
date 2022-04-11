@@ -26,6 +26,8 @@ export const style = StyleSheet.create({
     items: {
         padding: 10,
         fontSize: 30,
+        textAlign: 'center',
+
     },
     modalView: {
         justifyContent: 'center',  
