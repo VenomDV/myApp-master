@@ -1,17 +1,18 @@
 import React from 'react';
-import { SafeAreaView, View, TouchableOpacity } from 'react-native';
+import { ScrollView, View, Image, Dimensions } from 'react-native';
 import Header from './components/header';
 import { style } from './components/header/style';
 import Parking from './components/header/api';
 
 const App = () => {
     return (
-      <SafeAreaView style={style.container}>
-        <View>
+      <ScrollView bounces={true} showsVerticalScrollIndicator={true} style={{height: Dimensions.get('window').height}} >
+        <View style={style.container}>
+          <Image source={require('./images/parking_cars_lamps.jpg')} style={style.imgParking} />
           <Header content='Parking' />
+          <Parking/>
         </View>
-        <Parking/>
-      </SafeAreaView>
+      </ScrollView>
     );
 }
 

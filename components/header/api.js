@@ -11,7 +11,6 @@ const Parking = () => {
     fetchData();
     // console.log("merci");
   }, []);
-const newapi = api;
 
 const fetchData = () => {
   var requestOptions = {
@@ -19,7 +18,7 @@ const fetchData = () => {
     redirect: 'follow'
   };
 
-    fetch("http://192.168.5.64/ProjetBTS-master/api.php",requestOptions)
+    fetch("https://jsonplaceholder.typicode.com/users",requestOptions)
     .then(response => {
       // console.log(response)
       return response.json()
@@ -36,18 +35,18 @@ const fetchData = () => {
     <View>
       {api.length > 0 && (
           api.map(props => (
-            <TouchableOpacity key={props.Id_plaque} onPress={() => {setPlaque(props), setVisible(true)}}>
-              <Text style={style.items}>{props.Nom}</Text>
+            <TouchableOpacity key={props.id} onPress={() => {setPlaque(props), setVisible(true)}}>
+              <Text style={style.items}>{props.name}</Text>
             </TouchableOpacity>
           ) 
           )
       )}
       <Modal visible={visible} animationType='fade' transparent={true}>
         <View style={style.modalView}>
-            <Text key={plaque.Id_plaque} style={style.modalText}>
-              Nom : {plaque.Nom}{"\n"}
-              Plaque : {plaque.Plaque}{"\n"}
-              Registre : {plaque.Register_tmp}
+            <Text key={plaque.id} style={style.modalText}>
+              Nom : {plaque.name}{"\n"}
+              UserName : {plaque.username}{"\n"}
+              E-mail : {plaque.email}
             </Text> 
             <Button onPress={() => {setVisible(false)}} title="Return" style={style.closeButton}>
               Return

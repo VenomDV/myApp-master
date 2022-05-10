@@ -1,9 +1,8 @@
-import { StyleSheet } from 'react-native';
-import { APP_COLOR } from '../../styles/color';
+import { Dimensions, StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
     titleP: {
-        backgroundColor: '#888888',
+        backgroundColor: 'rgba(236,47,47,1)',
         borderRadius: 100,
         display: 'flex',
         alignItems: 'center',
@@ -11,22 +10,34 @@ export const style = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10,
         borderRadius: 100,
-        justifyContent: "center"
+        justifyContent: "center",
+        shadowOffset:{
+            width: 0,
+            height: 4
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
     },
     text: {
         fontSize: 40,
         fontWeight: 'bold',
         color: '#FFF',
-        textAlignVertical: 'center'
+        textAlignVertical: 'center',
+        letterSpacing: 0.1,
     },
     container: {
-        flex: 1,
-        backgroundColor: APP_COLOR.backColor,
+        position: 'relative',
+        width: Dimensions.get('window').width,
+        height: 900,
     },
     items: {
+        position: 'relative',
         padding: 10,
         fontSize: 30,
         textAlign: 'center',
+        color: 'rgba(0,0,0,1)',
+        letterSpacing: 0.1,
+        bottom: 'auto',
 
     },
     modalView: {
@@ -54,5 +65,15 @@ export const style = StyleSheet.create({
         backgroundColor: '#FF3974',
         shadowColor: '#2AC062',
         shadowOpacity: 0.5, 
+    },
+    imgParking:{
+        position: 'absolute',
+        width: 450,
+        height: 1000,
+        opacity: 0.5,
+        left: 0,
+        right: 'auto',
+        top: 0,
+        bottom: 'auto'
     },
 });
