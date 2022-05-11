@@ -15,8 +15,9 @@ export const style = StyleSheet.create({
             width: 0,
             height: 4
         },
-        shadowOpacity: 0.25,
+        shadowOpacity: 1,
         shadowRadius: 4,
+        opacity: 1,
     },
     text: {
         fontSize: 40,
@@ -24,6 +25,7 @@ export const style = StyleSheet.create({
         color: '#FFF',
         textAlignVertical: 'center',
         letterSpacing: 0.1,
+        opacity: 1,
     },
     container: {
         position: 'relative',
@@ -38,6 +40,7 @@ export const style = StyleSheet.create({
         color: 'rgba(0,0,0,1)',
         letterSpacing: 0.1,
         bottom: 'auto',
+        fontWeight: 'bold'
 
     },
     modalView: {
