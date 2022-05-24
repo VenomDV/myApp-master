@@ -1,14 +1,20 @@
 import React from 'react';
-import { ScrollView, View, Image, Dimensions, ImageBackground } from 'react-native';
+import { ScrollView, View, Dimensions, ImageBackground } from 'react-native';
+/* Importing the Header and Parking components from the header folder. */
 import Header from './components/header';
-import { style } from './components/header/style';
 import Parking from './components/header/api';
+/* Importing the style object from the style.js file. */
+import { style } from './components/header/style';
 
+/* A function that returns a component. */
 const App = () => {
     return (
       <View>
+        {/* Displaying an image as a background. */}
         <ImageBackground source={require('./images/parking_cars_lamps.jpg')} style={style.imgParking} />
+        {/* A component that is used to display the title of the application. */}
         <Header content='Parking' />
+      {/* A component that is used to display a scrollable list of elements. */}
       <ScrollView bounces={false} showsVerticalScrollIndicator={true} style={{height: Dimensions.get('window').height}} >
         <View style={style.container}>
           <Parking/>
@@ -18,4 +24,5 @@ const App = () => {
     );
 }
 
+/* Exporting the App component. */
 export default App;

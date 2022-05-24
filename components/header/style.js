@@ -1,6 +1,8 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native'; 
+/* A React Native API that allows you to get the dimensions of the screen. */
 
 export const style = StyleSheet.create({
+    /* A style for the title of the app. */
     titleP: {
         backgroundColor: 'rgba(236,47,47,1)',
         borderRadius: 100,
@@ -19,6 +21,7 @@ export const style = StyleSheet.create({
         shadowRadius: 4,
         opacity: 1,
     },
+    /* This is a style for the text that is displayed on the screen. */
     text: {
         fontSize: 40,
         fontWeight: 'bold',
@@ -27,11 +30,13 @@ export const style = StyleSheet.create({
         letterSpacing: 0.1,
         opacity: 1,
     },
+    /* Setting the width and height of the container. */
     container: {
         position: 'relative',
         width: Dimensions.get('window').width,
         height: 900,
     },
+    /* A style for the text that is displayed on the screen. */
     items: {
         position: 'relative',
         padding: 10,
@@ -41,8 +46,8 @@ export const style = StyleSheet.create({
         letterSpacing: 0.1,
         bottom: 'auto',
         fontWeight: 'bold'
-
     },
+    /* This is a style for the modal view. */
     modalView: {
         justifyContent: 'center',  
         alignItems: 'center',   
@@ -54,11 +59,12 @@ export const style = StyleSheet.create({
         borderColor: '#fff',    
         marginTop: 80,  
         marginLeft: 40,
-        
     },
+    /* A style for the text that is displayed in the modal view. */
     modalText : {
         fontSize: 30
     },
+    /* This is a style for the close button. */
     closeButton: {
         display: 'flex',
         height: 60,
@@ -69,6 +75,7 @@ export const style = StyleSheet.create({
         shadowColor: '#2AC062',
         shadowOpacity: 0.5, 
     },
+    /* This is a style for the image that is displayed on the screen. */
     imgParking:{
         position: 'absolute',
         width: 450,
