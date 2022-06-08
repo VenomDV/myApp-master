@@ -16,13 +16,13 @@ const Parking = () => {
 
 const fetchData = () => {
   /* A request to the server. */
-  var requestOptions = {
+  var Requestoptions = {
     method: 'GET',
     redirect: 'follow'
   };
 
     /* A request to the server. */
-    fetch("http://192.168.5.64/ProjetBTS-master/ApiJoin.php",requestOptions)
+    fetch("http://192.168.5.64/ProjetBTS-master/ApiJoin.php",Requestoptions)
     /* A function that is called when the promise is resolved. */
     .then(response => {
       return response.json()
