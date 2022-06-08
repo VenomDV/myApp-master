@@ -6,7 +6,7 @@ import { style } from './style';
 
 const Parking = () => {
   /* A React Hook. It is a function that lets you “hook into” React state. */
-  const [api, setapi] = useState([])
+  const [api, setApi] = useState([])
   const [visible,setVisible] = useState(false)
   const[plaque, setPlaque] = useState([])
 
@@ -22,18 +22,17 @@ const fetchData = () => {
   };
 
     /* A request to the server. */
-    fetch("http://192.168.5.64/ProjetBTS-master/api.php",requestOptions)
+    fetch("http://192.168.5.64/ProjetBTS-master/ApiJoin.php",requestOptions)
     /* A function that is called when the promise is resolved. */
     .then(response => {
       return response.json()
     })
     .then(data => {
-      setapi(data)
+      setApi(data)
     })
     /* A function that is called when the promise is rejected. */
     .catch(error => console.log(error))
   }
-
 
   /* Returning a view. */
   return (
@@ -55,7 +54,7 @@ const fetchData = () => {
             <Text key={plaque.Id_plaque} style={style.modalText}>
               Nom : {plaque.Nom}{"\n"}
               Plaque : {plaque.Plaque}{"\n"}
-              Register_tmp : {plaque.Register_tmp}
+              Change_tmp : {plaque.Change_tmp}
             </Text> 
             {/* A component that is used to render a button. */}
             <Button onPress={() => {setVisible(false)}} title="Return" style={style.closeButton} />
